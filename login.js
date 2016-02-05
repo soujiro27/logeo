@@ -7,6 +7,7 @@ function inicia()
 {
   //$('input[type=submit]').on('click',validar);
   $('input#registro').on('click',registrar);
+  $('a').on('click',servidor);
 }
 
 function validar(e)
@@ -76,5 +77,20 @@ $('td#borrar').on('click',function(){
     $(this).parent().hide('slow');
 });
 
+
+}
+
+
+
+
+function servidor(e)
+{
+  e.preventDefault();
+  var papaya=confirm("eres mayor de edad ?");
+  console.log(papaya);
+  if(papaya)
+  {
+    setTimeout("redi()",1000);
+  }
 
 }
