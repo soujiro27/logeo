@@ -58,7 +58,23 @@ if(contador<6 || contador>8)
 {
   console.log("contraseña mal");
 }
+/*
+  var color=$('input[type=color]').val();
+  $('body').css('background',color);
+var tamano=$('input[type=number]').val();
+tamano=tamano+'px';
+$('body').css('font-size',tamano);
 
+*/
+
+var mail=$('input[type=email]').val();
+var fecha=$('input[type=date]').val();
+$('table').append('<tr><td>'+nombre+'</td><td>'+mail+'</td><td>'+fecha+'</td><td id=borrar>Eliminar</td></tr>');
+$('input[type=text]').val('');
+
+$('td#borrar').on('click',function(){
+    $(this).parent().hide('slow');
+});
 
 
 }
